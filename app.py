@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY', 'default_secret_key')
 
 # MongoDB connection
-mongo_uri = os.getenv('MONGO_URI', 'mongodb+srv://freelancingtodayinfo:free123@cluster0.k6fv5th.mongodb.net/')
+mongo_uri = os.getenv('MONGO_URI', 'mongodb+srv://freelancingtodayinfo:free123@cluster0.k6fv5th.mongodb.net/your-db?retryWrites=true&w=majority&tls=true')
 client = MongoClient(mongo_uri)
 db = client['attendance_system']
 
